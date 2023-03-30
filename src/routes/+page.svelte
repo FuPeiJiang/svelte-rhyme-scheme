@@ -13,7 +13,8 @@
 
 <script>
     // import word_to_phoneticsArr  from "./transformed.json"
-    import { onMount } from 'svelte';
+    import { base } from '$app/paths'
+    import { onMount } from 'svelte'
     // import LZMA from 'lzma-web'
     // import { LZMA } from "lzma"
     // const my_lzma = new LZMA("../src/lzma_worker.js");
@@ -30,7 +31,7 @@
         // const my_lzma = new LZMA("https://unpkg.com/lzma@2.1.8/src/lzma-d-min.js");
         const my_lzma = new LZMA();
         // const lzma = new LZMA();
-        fetch("/transformed.lzma")
+        fetch(`${base}/transformed.lzma`)
         .then(resp=>resp.arrayBuffer())
         .then(async arrayBuf=>{
             // const decompressed = await lzma.decompress(arrayBuf)
