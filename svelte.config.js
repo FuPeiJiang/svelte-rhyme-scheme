@@ -14,7 +14,7 @@ export default {
       strict: true
     }),
     paths: {
-      base: dev ? '' : '/svelte-github-pages',
+      base: dev ? '' : '/svelte-rhyme-scheme',
     }
   }
 };
